@@ -1,0 +1,35 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+nav {
+    display: flex;
+    min-height: 8vh;
+    max-height: 10vh;
+    margin: auto;
+    background-color: black;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.nav-logo{
+        color: cornsilk;
+        font: 600;
+        font-size: 5vh;
+}
+.nav-links{
+    display: flex;
+    width: 40%;
+    font-weight: bold;
+    justify-content: space-around;
+}
+.nav-links li{
+    list-style: none;
+}
+.nav-links a{
+    color: cornsilk;
+    text-decoration: none;
+}
