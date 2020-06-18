@@ -1,0 +1,60 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.body {
+		display: flex;
+
+}
+#vid{
+		position: absolute;
+		object-fit: cover;;
+		height: 100%;
+		width:100%;
+
+}
+
+#logo{
+		height: 50vw;
+		max-height: 50vh;
+		width:100%;
+		position: relative;
+		display: flex;
+		background-color:  black;
+		justify-content: center;
+		text-align: center;
+		align-items: center;
+		align-content: center;
+		overflow: hidden;
+}
+#logo h1 {	
+		position: relative;
+		font-size: 10vw;
+		z-index:1000;
+		color: black;
+		mix-blend-mode:darken;
+		font-family: 'Abril Fatface',  cursive;
+}
+body {
+		background-color: #F4F8FB;
+
+}
+.top_article{
+		display: grid;
+		grid-template-columns: 3fr 2fr;
+		margin-left: 20%;
+		margin-right: 20%;
+		height: 30vh;
+
+}
+
+.top_img{
+	height: 30vh;
+	width: 60%;
+	position: absolute;
+	background-size: contain;
+
+} 
