@@ -2,15 +2,41 @@
 <html lang="en">
 <head>
 		{% load static %}
-		<link rel="stylesheet" href="{% static "Blog/main.css" %}">
-         <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla&family=Lora&display=swap" rel="stylesheet"> 
+		{% block css %}
+	    {% endblock %}
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla&family=Lora&display=swap" rel="stylesheet"> 
 		<meta charset="UTF-8">
         <title>BlogTown</title>
 </head>
 <body>
-		<nav>
-		<div class="logo"></div>
-		</nav>
+
+	<nav class="nav">
+	
+			<div class="nav-brand">
+				<a href="#"class="brand">BlogTown</a>
+			</div>
+                <div>
+				<ul class="nav-items">
+					<li class="nav-links">
+						<a href="#">Home</a>
+					</li>
+					<li class="nav-links">
+						<a href="#">Categories</a>
+					</li>
+					<li class="nav-links">
+						<a href="#">Contact</a>
+					</li>
+					<li class="nav-links">
+						<a href="#">Contribute</a>
+					</li>
+					<li class="nav-links">
+						<a href="#">About</a>
+					</li>
+					</ul>
+				</div>
+		
+
+	</nav>
 		{% block body %}
 		{% endblock %}
         

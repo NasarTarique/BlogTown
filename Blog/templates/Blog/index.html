@@ -1,18 +1,12 @@
 {% extends "Blog/layout.html" %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static "/Blog/main.css" %}">
+
+{% endblock %}
+
 
 {% block body %}
-{% load static %}
-<section id="logo">
-		<video autoplay muted loop  id="vid" src="{% static "Blog/whitestroke.mp4" %}"></video>
-		<h1>BLOGTOWN</h1>
-</section>
-<section class="top_article">
-		<div class="top_img"></div>
-		<div class="top_art_desc">
-		<h1>DEMO HEADING </h1>
-		<p>Elit accusantium ut magni unde a doloribus Et ea ad ex soluta repellendus Molestiae nam quae nihil molestias enim nesciunt Ipsa eveniet quaerat officia eius consectetur? Sunt quam quia qui.</p>
-		</div>
-
-</section>
+<img src="{% static "Blog/blogtown.jpg" %}">
 
 {% endblock %}
