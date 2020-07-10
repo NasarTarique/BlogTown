@@ -149,6 +149,7 @@ main .site-title{
     color: ivory;
     width: 100%;
     background-color: black;
+<<<<<<< HEAD
 
 }
 .main-content{
@@ -160,3 +161,9 @@ main .site-title{
     padding: 10px 20px;
 }
 
+=======
+    color: blanchedalmond;
+display: flex;
+flex-direction: row;
+}
+>>>>>>> 8d410374c522ca4c6509f3e2bd153917d3fbe4bf
