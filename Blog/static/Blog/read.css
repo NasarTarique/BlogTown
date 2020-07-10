@@ -71,7 +71,7 @@ body{
 		width:100%;
 		object-fit: cover;
 }
-.content{
+.blog-content{
 		background-color: white;
 		min-height: 100vh;
 		box-shadow: 2px 2px  8px #23374D;
@@ -88,7 +88,7 @@ body{
 		display: block;
 		margin-top: 50px ;
 }
-.content > h1{
+.blog-content > h1{
 		padding-top: 5vh;
 		font-size: 50px;
 		margin-bottom: 5vh;
@@ -150,13 +150,8 @@ body{
 		width:10%;
 		border-radius: 50%; 
 }
-.footer{
-		height:10vh; 
-		position: relative;
-		margin-top: 10vh;
-}
 
-.content a {
+.blog-content a {
   color: green;
   background-color: transparent;
   text-decoration: none;
