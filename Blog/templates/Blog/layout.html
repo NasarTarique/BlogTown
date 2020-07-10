@@ -3,14 +3,20 @@
 <head>
 		{% block css %}
 	    {% endblock %}
-		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla&family=Lora&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla&family=Lora&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/yourcode.js"></script> 
 		<meta charset="UTF-8">
+		
         <title>BlogTown</title>
 </head>
+<<<<<<< HEAD
+<body class ="body">
+=======
 <body class="Body">
+>>>>>>> 8d410374c522ca4c6509f3e2bd153917d3fbe4bf
 
 	<nav class="nav">
-	
+	      <div class="nav-menu flex-row">
 			<div class="nav-brand">
 				<a href="#"class="brand">BlogTown</a>
 			</div>
@@ -26,18 +32,67 @@
 						<a href="#">Contact</a>
 					</li>
 					<li class="nav-links">
-						<a href="#">Contribute</a>
+						<a class="exp" href="#">Contribute</a>
 					</li>
 					<li class="nav-links">
 						<a href="#">About</a>
 					</li>
 					</ul>
 				</div>
+			</div>
 		
 
 	</nav>
+	<div>
 		{% block body %}
 		{% endblock %}
+	</div>
+	<div class="footer">
+		<div class="main-content">
+		<div class="about us">
+			<h2> About Us</h2>
+			<div class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam atque nobis odio eligendi reiciendis inventore ea deserunt labore asperiores facilis reprehenderit, tenetur officiis dolore, maxime eum nisi veniam sequi enim?</p></div>
+		</div>
+       <div class="social">
+		    	<h2>Follow Us</h2>
+				<div class="content">
+				<a href="#"><span class="fab fa-facebook-f"></span></a>
+				<a href="#"><span class="fab fa-twitter"></span></a>
+				<a href="#"><span class="fab fa-instagram"></span></a>
+				<a href="#"><span class="fab fa-youtube"></span></a>
+				</div>
+	   </div>	
+	   <div class="Address">
+		   <h2>Address</h2>
+		   <div class="content">
+			   <div class="place">
+				   <span class="fas fa-map-marker-alt"></span>
+				   <span class="text">Ranchi,Jharkhand</span>
+			   </div>
+			   <div class="phone">
+				<span class="fas fa-phone-alt"></span>
+				<span class="text">+91-6202238935</span>
+			    </div>
+			   <div class="email">
+				<span class="fas fa-envelope"></span>
+				<span class="text">abc@gmail.com</span>
+			   </div>
+		   </div>
+	   </div>
+	   <div class="developers">
+		   <h2>Developers</h2>
+		   <div class="content">
+			   <a href="#">Tarique Nasar<br>
+			   Software developer</a><br>
+			   <p></p>
+			   <a href="#">Shubham Mittal<br>
+				Rookie web developer</a>
+
+		   </div>
+	   </div>	
+	</div>	
+	</div>
+
         
 </body>
 </html>
