@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from .models import Blog
 # Create your views here.
 
 
@@ -12,4 +13,6 @@ def categories(request):
 
 
 def read(request, num):
-    return render(request, "Blog/reader.html")
+    return render(request, "Blog/reader.html", {
+        "blog": Blog.objects.get(pk=num)
+    })
