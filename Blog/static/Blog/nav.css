@@ -13,12 +13,16 @@ a{
     flex-wrap: wrap;
 }
 nav{
+	position: sticky;
+	width: 100%;
+	top:0;
     background-color:snow;
     padding: 0 2rem;
     height: 0rem;
-    min-height: 10vh;
+    min-height: 9vh;
+	z-index:1000;
     font-family:'Montserrat', sans-serif; 
-
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .nav-brand{
 		display: flex;

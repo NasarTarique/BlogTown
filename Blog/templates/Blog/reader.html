@@ -8,14 +8,17 @@
 
 {% block body %}
 {% load markdownify %}
-<div class="cover"><img class="cover-img" src="{{blog.image.url}}" alt=""></div>
+<div class="blog-container">
+<div class="author">
+		<div class="author-img"><div class="authorimg-container"><img src="{{blog.authorimage.url}}" alt=""></div>
+		<h2>{{blog.author}}</h2>
+		</div>
+</div>
+
 <div class="blog-content">
-		<h1>{{blog.title| upper}}</h1>
+		<h1>{{blog.title}}</h1>
+		<div class="img-container"><img src="{{blog.image.url}}" alt=""></div>
 		<div class="text" >{{blog.content |markdownify}}</div>
 </div>
-<div class="author">
-		<div class="author-img"><div class="authorimg-container"><img src="{{blog.authorimage.url}}" alt=""></div></div>
-
-<h2>{{blog.author}}</h2>
 </div>
 {% endblock %} 
