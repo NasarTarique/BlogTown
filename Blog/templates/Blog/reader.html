@@ -3,22 +3,27 @@
 {% block css %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'Blog/read.css' %}">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Libre+Baskerville&family=Dancing+Script:wght@600&family=Roboto&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
 {% load markdownify %}
 <div class="blog-container">
-<div class="author">
-		<div class="author-img"><div class="authorimg-container"><img src="{{blog.authorimage.url}}" alt=""></div>
-		<h2>{{blog.author}}</h2>
+		<div class="genre-container">
+				<div class="genre"><h3>{{blog.genre}}</h3></div>
 		</div>
-</div>
 
 <div class="blog-content">
-		<h1>{{blog.title}}</h1>
+		<h1>{{blog.title| upper}}</h1>
 		<div class="img-container"><img src="{{blog.image.url}}" alt=""></div>
 		<div class="text" >{{blog.content |markdownify}}</div>
+</div>
+<div class="author">
+		<div class="author-img"><h4>AUTHOR</h4><div class="authorimg-container"><img src="{{blog.authorimage.url}}" alt=""></div>
+				<div class="author-bio"><p>I am an idiot blogger who has done a Phd in stupidity from the esteemed University of Idiocy , and now I am passionate about spreading my stupidity to the world</p></div>
+		<h2>{{blog.author}}</h2>
+
+	</div>
 </div>
 </div>
 {% endblock %} 
