@@ -3,58 +3,6 @@ body{
     overflow-x: hidden;
     margin: 0rem;
 }
-a{
-    text-decoration: none;
-    color:white;
-}
-.flex-row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-nav{
-    background-color:black;
-    height: 0rem;
-    min-height: 10vh;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-
-}
-.nav .nav-brand a{
-    font-size: 2rem;
-    padding: 1.3rem 0;
-    padding-left: 2rem;
-    display: block;
-    color:white;
-    
-}
-.nav .nav-menu{
-    justify-content: space-between;
-    
-}
-.nav .nav-items{
-    display: flex;
-    margin: 0rem;
-    padding-right: 2rem;
-    list-style-type: none;
-    color: white;
-;
-}
-.nav .nav-items .nav-links{
-    padding: 1.6rem 2.5rem;
-    font-size: 1.2rem;
-    position: relative;
-    color: white;
-  
-}
-.nav .nav-items .nav-links :hover{
-     color:rgb(255, 230, 0);
-}
-.exp{
-    color:rgba(38, 190, 236, 0.904);
-}
-.exp :hover{
-    color:rgb(255, 230, 0);
-}
 main .site-title{
     background-image: url(../Blog/blogtown.jpg);
     background-size: cover;
@@ -394,3 +342,12 @@ flex-direction: row;
     color: blanchedalmond;
     height: 100%;
   }
+}
+.main-content{
+    display: flex;
+    justify-content: space-around;
+}
+.us{
+    flex-basis: 20%;
+    padding: 10px 20px;
+}
