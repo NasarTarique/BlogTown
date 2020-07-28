@@ -5,7 +5,7 @@
 }
 a{
     text-decoration: none;
-    color:#352226;
+    color:#c9a814;
 }
 .flex-row{
     display: flex;
@@ -16,7 +16,7 @@ nav{
 	position: sticky;
 	width: 100%;
 	top:0;
-    background-color:floralwhite;
+    background-color:black;
     padding: 0 2rem;
     height: 0rem;
     min-height: 9vh;
@@ -28,7 +28,7 @@ nav{
 		display: flex;
 }
 .brand {
-    font-size: 2rem;
+    font-size: 10rem;
     padding: 1.3rem 0;
 	color:#352226;
 	padding-left: 2rem;
@@ -42,7 +42,7 @@ nav{
     
 }
 .nav-menu{
-    justify-content: space-between;
+    justify-content: center;
     
 }
 .nav-items{
@@ -60,11 +60,11 @@ nav{
     position: relative;
 }
 .nav-links :hover{
-		color:#FF0036;
+		color:#9ad315dc;
 }
 
 .exp{
-    color:rgba(38, 190, 236, 0.904);
+    color:rgba(236, 38, 38, 0.904);
 }
 .exp :hover{
     color:rgb(255, 230, 0);
