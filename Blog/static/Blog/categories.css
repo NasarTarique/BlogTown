@@ -1,0 +1,172 @@
+:root {
+    --font: "Roboto", sans-serif;
+    --fontOrigin: 1rem;     /* 16px */
+    --fontSmall: 0.625em;   /* 10px */
+    --fontMedium: 0.875em;  /* 14px */
+    --fontNormal: 1em;      /* 16px */
+    --fontLarge:  1.375em;  /* 22px */
+    --fontLight: 100;
+    --fontRegular: 400;
+    --speed: 0.65s;
+  }
+  
+  @keyframes zoom {
+    from {
+      object-position: 0 50%;
+    }
+    to {
+      object-position: 100% 50%;
+    }
+  }
+
+  
+  * {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    
+  }
+  body{
+    background-color: black;
+    overflow-x: hidden;
+  }
+
+  
+   .wrapper {
+    font-family: var(--font);
+    font-weight: var(--fontOrigin);
+    font-size: 1rem;
+    line-height: 1.2;
+    letter-spacing: 0.005rem;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-synthesis: subpixel-antialiased;
+    
+    
+  }
+  
+  .wrapper {
+    
+    width: 100vw;
+    height:89vh;
+  
+    
+  }
+  .upper{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 85px;
+    padding-top: 105px;
+  
+    
+  }
+  .lower{
+    display: flex;
+    justify-content: space-evenly;
+    
+  }
+  
+  
+  .card {
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: 200px;
+    font-size: var(--fontOrigin);
+    border-radius: 8px;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    -webkit-transition: all var(--speed) ease;
+    transition: all var(--speed) ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 40px 130px rgba(0, 0, 0, 0.6);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+  }
+  
+  
+  
+  
+  .card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+  }
+  
+  .card__image img {
+    -webkit-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    -webkit-transition: all var(--speed) ease;
+    transition: all var(--speed) ease;
+    animation-name: zoom;
+    animation-duration: 30s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .card:hover .card__image img {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0.5;
+  }
+  
+  
+  
+  .card__body {
+    display: grid;
+    padding: 0 20px;
+  }
+  
+  .card__name {
+    padding-top: 85px;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 2px;
+    color: white;
+    font-size: var(--fontLarge);
+    font-weight: var(--fontLight);
+    letter-spacing: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+    background: -webkit-linear-gradient(white, #a1a1a1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-transition: all var(--speed) ease;
+    transition: all var(--speed) ease;
+  }
+  
+  .card:hover .card__name {
+    background: -webkit-linear-gradient(white, #c1c1c1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
+
+  .card:hover .bg{
+    background-color: red;
+    
+  }
+

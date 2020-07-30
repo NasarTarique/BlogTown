@@ -88,46 +88,6 @@
             startSlide();
 
 
-            var demoButtons;
-
-function start () {
-  
-  // Add event "click" to "demo buttons"
-  demoButtons = document.querySelectorAll ('.js-modify');
-  for (var i = 0; i < demoButtons.length; i++) {
-    demoButtons[i].addEventListener ('click', toggleEffect);
-  }
-  
-  // Add event "click" to "save buttons"
-  var saveButtons = document.querySelectorAll ('.js-save');
-  for (var i = 0; i < saveButtons.length; i++) {
-    saveButtons[i].addEventListener ('click', toggleActive);
-  }
-  
-}
-
-// Toggle "effect" classes
-function toggleEffect () {
-  var target = document.querySelector (this.dataset.target);
-      target.dataset.effect = this.dataset.effect;
-  
-  for (var i= 0; i < demoButtons.length; i++) {
-    demoButtons[i].classList.remove ('active');
-  }
-  
-  toggleActive.call (this);
-}
-
-// Toggle "active" class
-function toggleActive () {
-  this.classList.toggle ('active');
-}
-
-// Invoke "start ()" function
-window.addEventListener ('load', start);
-
-
-
 
         </script> 
 
@@ -136,113 +96,48 @@ window.addEventListener ('load', start);
         <!-- Blog  card -->
 
 
+        <div class="blog-cards">
+        <div class="blog-card">
+          <div class="square">
+            <img src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e1c8fe0c9197d66232511525bfd1cc82&auto=format&fit=crop&w=1100&q=80" class="mask">
+         <div class="h1">Is Apple a Design Company?</div>
+            <p>Apple is more than a tech company; it became a culture unto itself, a passion of most of people and the birthplace of the world’s most revolutionized products.</p>
+            
+         <div><a href="https://medium.com/@laheshk/is-apple-a-design-company-f5c83514e261" target="_" class="button">Read More</a></div>
+          </div>
+         </div>
+         
+
+         <div class="blog-card">
+          <div class="square">
+            <img src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e1c8fe0c9197d66232511525bfd1cc82&auto=format&fit=crop&w=1100&q=80" class="mask">
+         <div class="h1">Is Apple a Design Company?</div>
+            <p>Apple is more than a tech company; it became a culture unto itself, a passion of most of people and the birthplace of the world’s most revolutionized products.</p>
+            
+         <div><a href="https://medium.com/@laheshk/is-apple-a-design-company-f5c83514e261" target="_" class="button">Read More</a></div>
+          </div>
+         </div>
+         
+
+         <div class="blog-card">
+          <div class="square">
+            <img src="https://images.unsplash.com/photo-1504610926078-a1611febcad3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e1c8fe0c9197d66232511525bfd1cc82&auto=format&fit=crop&w=1100&q=80" class="mask">
+         <div class="h1">Is Apple a Design Company?</div>
+            <p>Apple is more than a tech company; it became a culture unto itself, a passion of most of people and the birthplace of the world’s most revolutionized products.</p>
+            
+         <div><a href="https://medium.com/@laheshk/is-apple-a-design-company-f5c83514e261" target="_" class="button">Read More</a></div>
+          </div>
+         </div>
+        </div>
+
 
 
          <!-- Blog card end  -->
 
 
+         
+
+
  
-    <section class="wrapper">
-  
-       <div class="upper"> 
-        <!-- BEGIN: card -->
-        <div class="card" data-effect="zoom">
-          <button class="card__save  js-save" type="button">
-            <i class="fa  fa-bookmark"></i>
-           </button>
-          <figure  class="card__image">
-            <img src="https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg" alt="Short description">
-          </figure>
-        
-          <div class="card__body">
-            <h3 class="card__name">Neil Armstrong</h3>
-            <p class="card__job">astronaut & engineer</p>
-            <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
-          </div>
-          
-        </div>
-        <div class="card" data-effect="zoom">
-            <button class="card__save  js-save" type="button">
-              <i class="fa  fa-bookmark"></i>
-             </button>
-            <figure  class="card__image">
-              <img src="https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg" alt="Short description">
-            </figure>
-           
-            <div class="card__body">
-              <h3 class="card__name">Neil Armstrong</h3>
-              <p class="card__job">astronaut & engineer</p>
-              <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
-            </div>
-            
-          </div>
-          <div class="card" data-effect="zoom">
-            <button class="card__save  js-save" type="button">
-              <i class="fa  fa-bookmark"></i>
-             </button>
-            <figure  class="card__image">
-              <img src="https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg" alt="Short description">
-            </figure>
-
-            <div class="card__body">
-              <h3 class="card__name">Neil Armstrong</h3>
-              <p class="card__job">astronaut & engineer</p>
-              <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
-            </div>
-           
-          </div>
-        </div>
-          <div class="lower">
-          <div class="card" data-effect="zoom">
-            <button class="card__save  js-save" type="button">
-              <i class="fa  fa-bookmark"></i>
-             </button>
-            <figure  class="card__image">
-              <img src="https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg" alt="Short description">
-            </figure>
-            
-            <div class="card__body">
-              <h3 class="card__name">Neil Armstrong</h3>
-              <p class="card__job">astronaut & engineer</p>
-              <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
-            </div>
-            
-          </div>
-          <div class="card" data-effect="zoom">
-            <button class="card__save  js-save" type="button">
-              <i class="fa  fa-bookmark"></i>
-             </button>
-            <figure  class="card__image">
-              <img src="https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg" alt="Short description">
-            </figure>
-            
-            <div class="card__body">
-              <h3 class="card__name">Neil Armstrong</h3>
-              <p class="card__job">astronaut & engineer</p>
-              <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
-            </div>
-           
-          </div>
-          <div class="card" data-effect="zoom">
-            <button class="card__save  js-save" type="button">
-              <i class="fa  fa-bookmark"></i>
-             </button>
-            <figure  class="card__image">
-              <img src="https://c1.staticflickr.com/4/3935/32253842574_d3d449ab86_c.jpg" alt="Short description">
-            </figure>
-           
-            <div class="card__body">
-              <h3 class="card__name">Neil Armstrong</h3>
-              <p class="card__job">astronaut & engineer</p>
-              <p class="card__bio"> American astronaut, engineer, and the first person to walk on the Moon.</p>
-            </div>
-            
-        </div>
-          </div>
-        <!-- END: card -->
-        
-      </section>
-     
-
 </main>
 {% endblock %}
