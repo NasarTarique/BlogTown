@@ -3,7 +3,8 @@
 {% block css %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'Blog/read.css' %}">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Libre+Baskerville&family=Dancing+Script:wght@600&family=Roboto&family=Lora:ital@0;1&display=swap" rel="stylesheet">
+<script src="{% static 'Blog/read.js' %}"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Libre+Baskerville&family=Dancing+Script:wght@600&family=Raleway:wght@400;500;600&family=Roboto&family=Lora:ital@0;1&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block body %}
@@ -26,4 +27,21 @@
 	</div>
 </div>
 </div>
+<section class="posts-container">
+	<div class="left-icon"><i class="fas fa-chevron-circle-left"></i></div>
+	<div class="right-icon"><i class="fas fa-chevron-circle-right"></i></div>
+
+	{% for post in posts  %}
+	<div class="post-card" data-number="{{post.pk}}">
+	<div class="post-img">
+			<img src="{{post.image.url}}" alt="">
+	</div>
+	<div class="post-content">
+						<div class="post-category">{{post.genre| upper}}</div>
+			<div class="post-title">{{post.title| upper}}</div>
+			<div class="post-author">{{post.author|upper}}</div>
+	</div>
+	</div>
+	{% endfor %}
+	</section>
 {% endblock %} 
