@@ -15,10 +15,16 @@ def categories(request):
 def read(request, num):
     AllBlogs = Blog.objects.all()
     posts = []
-    for x in range(0,4):
+    for x in range(0, 6):
         posts.append(AllBlogs[x])
 
     return render(request, "Blog/reader.html", {
         "blog": Blog.objects.get(pk=num),
         "posts": posts
     })
+
+def contact(request):
+    return render(request, "Blog/contact.html")
+
+def about(request):
+    return render(request, "Blog/about.html")

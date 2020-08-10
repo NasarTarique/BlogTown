@@ -1,4 +1,5 @@
 body{
+		background-color: #FAFAFA;
 }
 .blog-container{
 		display:grid;
@@ -7,7 +8,7 @@ body{
 .blog-content{
 		position: relative;
 		margin-top: 5vh;
-		background-color: floralwhite;
+		background-color: white;
 		min-height: 100vh;
 		font-size: 15px;
 		text-align: center;
@@ -19,7 +20,7 @@ body{
 }
 .genre{
 		position:fixed;
-		background-color:#FF0036;
+		background-color:#50d890;
 		height: 40px;
 		line-height: 40px;
 		width:15ch;
@@ -27,7 +28,7 @@ body{
 		text-align: center;
 		justify-items: center;
 		font-family: 'Montserrat', sans-serif;
-		color: floralwhite;
+		color: white;
 		font-weight: 800;
 }
 .genre > h3{
@@ -128,7 +129,7 @@ body{
 		color: #756367;
 		font-size: 15px;
 		text-align: center;
-		background-color: floralwhite;
+		background-color: white;
 }
 .author-bio >p{
 		margin: 25px;
@@ -174,19 +175,24 @@ blockquote p {
 		justify-content: space-evenly;
 		margin-bottom: 80px;
 		font-family: 'Raleway', sans-serif;
-		background-color: floralwhite;
+		background-color: #F1F1F1;
 		overflow-x: hidden;
 }
 .post-card{
-		height: 30vh;
-		width:25ch;
+		height: 35vh;
+		position: relative;
+		display:none;
+		width:35ch;
 		border-radius: 5px;
 		line-height: 20px;
 		background-color: white;
 		transition-duration: 600ms;
+		animation-duration: 400ms;
+		animation-fill-mode: forwards;
+		animation-iteration-count: 1;
 }
 .post-img{
-		height: 50%;
+		height: 45%;
 		border-radius: 5px;
 }
 .post-img > img{
@@ -196,32 +202,36 @@ blockquote p {
 		object-fit: cover;
 }
 .post-content{
-		margin-top: 20px;
+		margin-top: 13px;
 		margin-left: 15px;
+		width: 33ch;
 }
 .post-category{
-		margin-bottom:10px;
+		margin-bottom:5px;
 		letter-spacing: 2px;
 		font-weight: 600;
-		font-size: 12px;
-		color: #FF0036;
+		font-size: 13px;
+		color: #50d890;
 }
 .post-title{
 		letter-spacing: 2px;
 		font-weight: 600;
 		font-size: 15px;
-		margin-bottom: 10px;
+		margin-bottom: 5px;
 
 }
 .post-author{
 		letter-spacing: 2px;
-		font-size: 13px;
+		font-weight: 600;
+		position: sticky;
+		bottom: 0;
+		font-size: 12px;
 		color: grey;
 
 }
 .post-card:hover{
-		height: 35vh;
-		width:30ch;
+		height: 40vh;
+		width:38ch;
 		cursor:pointer;
 
 }
@@ -230,15 +240,44 @@ blockquote p {
 		height: 35px;
 		width: 35px;
 		font-size: 35px;
-		left: 4%;
-		color: #FF0036;
+		left: 1%;
+		color: #50d890;
+		z-index: 1000;
 }
 .right-icon{
 		position: absolute;
 		height: 35px;
 		width: 35px;
 		font-size: 35px;
-		right: 4%;
-		color: #FF0036;
+		right: 1%;
+		color: #50d890;
+		z-index: 1000;
 }
+.left-icon:hover , .right-icon:hover{
+		cursor: pointer;
+}
+@keyframes leftfadeout{
+		0%{
+			opacity: 1;
+		}
+		75%{
+				opacity: 0;
+				display: none;
 
+		}
+		100%{
+			opacity: 0;
+			display: none;
+			width:0;
+		}
+}
+@keyframes rightfadein{
+		0% {
+				opacity:0;
+				display:none;
+		}
+		100%{
+				opacity: 1;
+				display:block;
+		}
+}

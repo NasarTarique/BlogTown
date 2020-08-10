@@ -3,9 +3,13 @@
     padding:0;
     box-sizing:border-box;
 }
-a{
+.nav-links > a{
 text-decoration: none;
-color:#352226;
+color: white;
+letter-spacing:2px;
+}
+.nav-brand > a{
+		text-decoration: none;
 }
 .flex-row{
 display: flex;
@@ -16,12 +20,12 @@ nav{
 position: sticky;
 width: 100%;
 top:0;
-background-color:floralwhite;
+background-color:#232a34;
 padding: 0 2rem;
 height: 0rem;
 min-height: 9vh;
 z-index:1000;
-font-family:'Montserrat', sans-serif; 
+font-family:'Raleway', sans-serif; 
 opacity: 0.98;
 }
 .nav-brand{
@@ -30,16 +34,19 @@ opacity: 0.98;
 .brand {
 font-size: 2rem;
 padding: 1.3rem 0;
-color:#352226;
+color:white;
 padding-left: 2rem;
+letter-spacing: 2px;
+font-weight:600;
 
 
 }
 .brand2 {
 font-size: 2rem;
 padding: 1.3rem 0;
-    color:#FF0036;
-
+    color:#50d890;
+letter-spacing:2px;
+font-weight:600;
 }
 .nav-menu{
 justify-content: space-between;
@@ -60,44 +67,32 @@ font-size: 1.2rem;
 position: relative;
 }
 .nav-links :hover{
-    color:#FF0036;
+    color:#50d890;
 }
 
-.exp{
-color:rgba(38, 190, 236, 0.904);
-}
-.exp :hover{
-color:rgb(255, 230, 0);
-}
-
-
-
-.main-content{
-    display: flex;
-    justify-content: space-around;
-  }
-  .about{
-    flex-basis: 17%;
-    
-  }
-  .content{
-    padding-top: 15px;
-  }
-  .us{
-    padding-top: 20px;
-  }
-  
-  
-  
-  
-  .footer{
+.footer{
       position: relative;
       bottom: 0px;
-      color: ivory;
+      color: white;
       width: 100%;
-      background-color: black;
-      color: rgb(255, 205, 205);
+      background-color: #232a34;
       display: flex;
+	  font-family:'Raleway', sans-serif;
+	  letter-spacing: 3px;
       justify-content: center;
   
   }
+
+.social{
+		  margin-top: 5vh;
+		  margin-bottom: 5vh;
+		  text-align: center;
+}
+
+.content{
+		font-size: 24px;
+		margin-top:20px;
+}
+.content > a{
+		color:#50d890;
+}

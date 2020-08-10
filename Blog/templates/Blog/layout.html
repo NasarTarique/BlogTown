@@ -13,25 +13,21 @@
 	<nav class="nav">
 	      <div class="nav-menu flex-row">
 			<div class="nav-brand">
-				<a href="#"class="brand">BLOG</a>
-				<a href="#"class="brand2">TOWN</a>
+				<a href="{% url 'index' %}" class="brand">BLOG</a>
+				<a href="{% url 'index' %}" class="brand2">TOWN</a>
 			</div>
                 <div>
 				<ul class="nav-items">
 					<li class="nav-links">
-						<a href="#">Home</a>
+							<a href="{% url 'index' %}">HOME</a>
 					</li>
 					<li class="nav-links">
-						<a href="categories.html">Categories</a>
+							<a href="{% url 'categories' %}">CATEGORIES</a>
+					<li class="nav-links">
+							<a href="{% url 'contact' %}">CONTACT</a>
 					</li>
 					<li class="nav-links">
-						<a href="#">Contact</a>
-					</li>
-					<li class="nav-links">
-				 		<a class="exp" href="#">Contribute</a>
-					</li>
-					<li class="nav-links">
-						<a href="#">About</a>
+							<a href="{% url 'about' %}">ABOUT</a>
 					</li>
 					</ul>
 				</div>
@@ -44,50 +40,16 @@
 		{% block body %}
 		{% endblock %}
 	<div class="footer">
-		<div class="main-content">
-		<div class="about us">
-			<h2> About Us</h2>
-			<div class="content"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam atque nobis odio eligendi reiciendis inventore ea deserunt labore asperiores facilis reprehenderit, tenetur officiis dolore, maxime eum nisi veniam sequi enim?</p></div>
-		</div>
        <div class="social us">
-		    	<h2>Follow Us</h2>
+		    	<h3>FOLLOW BLOGTOWN</h3>
 				<div class="content">
-				<a href="#"><span class="fab fa-facebook-f"></span></a>
-				<a href="#"><span class="fab fa-twitter"></span></a>
-				<a href="#"><span class="fab fa-instagram"></span></a>
-				<a href="#"><span class="fab fa-youtube"></span></a>
+				<a href="#"><span class="fab fa-facebook-square"></span></a>
+				<a href="#"><span class="fab fa-twitter-square"></span></a>
+				<a href="#"><span class="fab fa-instagram-square"></span></a>
+				<a href="#"><span class="fab fa-youtube-square"></span></a>
 				</div>
 	   </div>	
-	   <div class="Address us">
-		   <h2>Address</h2>
-		   <div class="content">
-			   <div class="place">
-				   <span class="fas fa-map-marker-alt"></span>
-				   <span class="text">Ranchi,Jharkhand</span>
-			   </div>
-			   <div class="phone">
-				<span class="fas fa-phone-alt"></span>
-				<span class="text">+91-6202238935</span>
-			    </div>
-			   <div class="email">
-				<span class="fas fa-envelope"></span>
-				<span class="text">abc@gmail.com</span>
-			   </div>
-		   </div>
-	   </div>
-	   <div class="developers us">
-		   <h2>Developers</h2>
-		   <div class="content">
-			   <a href="#">Tarique Nasar<br>
-			   Software developer</a><br>
-			   <p></p>
-			   <a href="#">Shubham Mittal<br>
-				Rookie web developer</a>
-
-		   </div>
-	   </div>	
 	</div>	
-	</div>
 
         
 </body>

@@ -1,0 +1,22 @@
+.container{
+		height: 100vh;
+		display:grid;
+		font-family:"Raleway", sans-serif;
+}
+
+#particles-js{
+		position: absolute;
+		height: 100%;
+		width:100%;
+		background-color:#000000;
+}
+
+.form-container{
+	height: 70%;
+	width:60%;
+	place-self:center;
+	background:transparent ;
+	border-radius:10px;
+	z-index:9999;
+}
+
