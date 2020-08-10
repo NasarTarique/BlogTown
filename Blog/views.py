@@ -11,6 +11,9 @@ def index(request):
 def categories(request):
     return render(request, "Blog/categories.html")
 
+def about(request):
+    return render(request, "Blog/about.html")    
+
 
 def read(request, num):
     AllBlogs = Blog.objects.all()
