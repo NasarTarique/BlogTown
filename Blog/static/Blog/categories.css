@@ -30,8 +30,13 @@
     
   }
   body{
-    background-color: black;
+    
+    background-image: url(https://wallpapercave.com/wp/wp5585354.png);
     overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+   
   }
 
   
@@ -144,29 +149,32 @@
     justify-self: center;
     margin-bottom: 2px;
     color: white;
-    font-size: var(--fontLarge);
+    font-size: 2.1rem;
     font-weight: var(--fontLight);
     letter-spacing: 0.1rem;
     text-align: center;
     text-transform: uppercase;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-    background: -webkit-linear-gradient(white, #a1a1a1);
+    
+    background: -webkit-linear-gradient(white,white);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-transition: all var(--speed) ease;
     transition: all var(--speed) ease;
+    text-rendering: geometricPrecision;
+    backface-visibility: hidden;
+    
   }
   
   .card:hover .card__name {
-    background: -webkit-linear-gradient(white, #c1c1c1);
+    background: -webkit-linear-gradient( 
+      10deg,
+      #9effed,
+      #8c9efa,black
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
   
 
-  .card:hover .bg{
-    background-color: red;
-    
-  }
 

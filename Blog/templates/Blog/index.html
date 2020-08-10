@@ -13,86 +13,161 @@
             <h1><a href="#">BlogTown</a></h1>
          </div>
     </section>
-    <section>
-    
-        <div class="wrap">
-            <div id="arrow-left" class="arrow"></div>
-            <div id="slider">
-                <div class="slide slide1">
-                    <div class="slide-content">
-                        <span> Breaking Bad</span>
-                    </div>
-                </div>
-                <div class="slide slide2">
-                    <div class="slide-content">
-                        <span> Dark</span>
-                    </div>
-                </div>
-                <div class="slide slide3">
-                    <div class="slide-content">
-                        <span>money Heist</span>
-                    </div>
-                </div>
-            </div>
-            <div id="arrow-right" class="arrow"></div>
+
+ <!-- corousel starts -->
+
+  <div class="corousel-bg">
+    <section class="home">
+        <div class="slider">
+           <div class="slide active one">
+               <div class="container">
+                   <div class="caption">
+                       <h1> Breaking Bad</h1>
+                       <h2 class="genre">Web Series</h2>
+                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minus consequuntur molestias asperiores ducimus praesentium?</p>
+                       
+                   </div>
+               </div>
+           </div>
+           <div class="slide two">
+               <div class="container">
+                   <div class="caption">
+                       <h1>Dark</h1>
+                       <h2 class="genre">Web Series</h2>
+                       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, aliquid.</p>
+                       
+                   </div>
+               </div>
+           </div>
+           <div class="slide three" >
+               <div class="container">
+                   <div class="caption">
+                       <h1> Money Heist</h1>
+                       <h2 class="genre">Web Series</h2>
+                       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores facilis vel quos!</p>
+                       
+                   </div>
+               </div>
+           </div>
         </div>
-    </section>  
+      
+       <!-- controls  -->
+       <div class="controls">
+           <div class="prev"></div>
+           <div class="next"></div>
+       </div>
     
-
-
-
-
-        <script>
-             
-
-
-            let sliderImages = document.querySelectorAll(".slide"),
-            arrowLeft = document.querySelector("#arrow-left"),
-            arrowRight = document.querySelector("#arrow-right"),
-            current = 0;
-//clear all images
-            function reset(){
-                for(let i = 0;i<sliderImages.length;i++){
-                    sliderImages[i].style.display = "none";
-
-                }
+       <!-- indicators -->
+       <div class="indicator">
+       </div>
+    
+       <script>
+                       
+     const slides=document.querySelector(".slider").children;
+     const prev=document.querySelector(".prev");
+     const next=document.querySelector(".next");
+     const indicator=document.querySelector(".indicator");
+     let index=0;
+    
+    
+       prev.addEventListener("click",function(){
+           prevSlide();
+           updateCircleIndicator(); 
+           resetTimer();
+       })
+    
+       next.addEventListener("click",function(){
+          nextSlide(); 
+          updateCircleIndicator();
+          resetTimer();
+          
+       })
+    
+       // create circle indicators
+        function circleIndicator(){
+            for(let i=0; i< slides.length; i++){
+                const div=document.createElement("div");
+                      div.innerHTML=i+1;
+                    div.setAttribute("onclick","indicateSlide(this)")
+                    div.id=i;
+                    if(i==0){
+                        div.className="active";
+                    }
+                   indicator.appendChild(div);
             }
-            // init slider
-            function startSlide(){
-                reset();
-                sliderImages[0].style.display = "block";
+        }
+        circleIndicator();
+    
+        function indicateSlide(element){
+             index=element.id;
+             changeSlide();
+             updateCircleIndicator();
+             resetTimer();
+        }
+         
+        function updateCircleIndicator(){
+            for(let i=0; i<indicator.children.length; i++){
+                indicator.children[i].classList.remove("active");
             }
-
-            function slideLeft(){
-                reset();
-                sliderImages[current - 1].style.display= "block";
-                current--;
-                }
-            function slideRight(){
-                reset();
-                sliderImages[current+1].style.display ="block";
-                current++;
+            indicator.children[index].classList.add("active");
+        }
+    
+       function prevSlide(){
+            if(index==0){
+                index=slides.length-1;
             }
-            arrowLeft .addEventListener("click",function(){
-                if(current === 0){
-                    current = sliderImages.length;
-                }
-                slideLeft();
-            });
-            arrowRight .addEventListener("click",function(){
-                if(current === sliderImages.length-1){
-                    current = -1;
-                }
-                slideRight();
-            });
-            startSlide();
-
-
-
-        </script> 
+            else{
+                index--;
+            }
+            changeSlide();
+       }
+    
+       function nextSlide(){
+          if(index==slides.length-1){
+              index=0;
+          }
+          else{
+              index++;
+          }
+          changeSlide();
+       }
+    
+       function changeSlide(){
+                  for(let i=0; i<slides.length; i++){
+                       slides[i].classList.remove("active");
+                  }
+    
+           slides[index].classList.add("active");
+       }
+    
+       function resetTimer(){
+             // when click to indicator or controls button 
+             // stop timer 
+             clearInterval(timer);
+             // then started again timer
+             timer=setInterval(autoPlay,5000);
+       }
+     
+      
+      function autoPlay(){
+          nextSlide();
+          updateCircleIndicator();
+      }
+    
+      let timer=setInterval(autoPlay,5000);
+    
+       </script>
+    
+     </section>
+    </div>
+     
+     <!-- corusel ends -->
+     
 
          <div class="side-bg">
          <div class="mid-bg">
+
+
         <!-- Blog  card -->
 
 
@@ -177,9 +252,6 @@
         </div>
     </div>
 
-         
-
-
- 
+     
 </main>
 {% endblock %}
