@@ -3,7 +3,7 @@
     padding: 0px;
 }
 .main-bg{ 
-    height: 450px;
+    height: 575px;
     width: 100%;
     background-image: url("../Blog/newspaper.jpg");
     background-attachment: fixed;
@@ -15,44 +15,55 @@
     justify-content: center;
     align-items: center;
     
+    
 
 }
 
-h1{
+h1{ 
     color: white;
-    opacity: 0.7;
-    font-weight: 900;
+    opacity: 0.85;
+    font-weight: 800;
     font-size: 120px;
     text-align: center;
     letter-spacing: 1px;
+    
 }
 
 .container{
-    background: #1D2B64;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to left, #F8CDDA, #1D2B64);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to left, #F8CDDA, #1D2B64); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-    padding-right: 10%;
-    padding-left: 10%;
-    height: 600px;
+    background-color: #d8e8ec;
+    padding-right: 125px;
+    padding-left: 21.5%;
+    max-height: auto;
+    min-height: 450px;
     width: 100%;
     
-}
- 
-.h2{
-    color:rgba(0, 0, 0, 0.63);
-    padding-top: 5%;
-    text-align: center;
-    font-size: 60px;
     
+    
+}
 
-}
+
+ 
+
 .p1{
-    padding-top: 60px;
-    color: black;
-    text-align: center;
-    font-size: 25px;
-    line-height: 1.6;
+    padding:7% 0;
+    padding-left: 17%;
+    color: #546c79;
+    text-align: left;
+    font-size: 22px;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     
 }
+
+.dev{
+    background-color: white;
+    height: 700px;
+    width :100%;
+}
+.dev-name{
+    color:rgba(32, 23, 23, 0.897);
+    text-align: center;
+    padding-top: 55px;
+    font-size: 80px;
+}
+
