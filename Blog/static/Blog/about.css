@@ -31,25 +31,29 @@ h1{
 
 .container{
     background-color: #d8e8ec;
-    padding-right: 125px;
-    padding-left: 21.5%;
     max-height: auto;
     min-height: 450px;
     width: 100%;
-    
-    
-    
+   display:grid; 
+   place-items:center;
+   grid-template-columns:1fr 2fr
 }
 
+.imgcontainer{
+		height:80%;
+		width:80%;
+}
 
- 
-
+.imgcontainer >img{
+		height:100%;
+		width:100%;
+		object-fit:cover;
+}
 .p1{
-    padding:7% 0;
-    padding-left: 17%;
     color: #546c79;
     text-align: left;
     font-size: 22px;
+	padding:30px;
     line-height: 1.5;
     font-family: Georgia, 'Times New Roman', Times, serif;
     

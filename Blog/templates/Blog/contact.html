@@ -5,25 +5,23 @@
 {% endblock %}
 
 {% block body %}
-<div class="form-container">
+<div class="container">
 	<div id="particles-js"> </div>
-	<div class="form-container">
-			<div class="form">
+			<div class="form-container">
 			<div class="form-info">
 			        <div class="form-name">
-							<h3>Name</h3>
-							<input id="name-input"type="text" name="name">
+							<h3>NAME</h3>
+							<div><input id="name-input"type="text" name="name"></div>
 					</div>
 			        <div class="form-mail">
 							<h3>E-mail</h3>
-			                <input id="mail-input" type="text" name="mail">
+							<div><input id="mail-input" type="text" name="mail"></div>
 			        </div>
 			</div>
 			<div class="form-content">
 					<h3>Content</h3>
-					<input type="text" name="content">
+					<div><input type="text" name="content"></div>
 					<div class="form-submit"></div>
-			</div>
 			</div>
 		</div>
 </div>
@@ -33,17 +31,6 @@
   console.log('callback - particles.js config loaded');
   
 });
-nav = document.querySelector(".nav")
-nav.style.backgroundColor = "#000000"
-nav.style.opacity = 1;
-document.querySelector(".brand2").style.color = "#39ff14";
-document.addEventListener("DOMContentLoaded",()=>{
-	document.querySelector(".footer").style.backgroundColor = "#000000";
-		document.querySelectorAll(".content >a").forEach( element =>{
-				element.style.color = "#39ff14"
-		} )
-	
-})
 </script>
 {% endblock %}
  
