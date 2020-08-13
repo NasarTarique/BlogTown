@@ -14,9 +14,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-
 }
 
 h1{ 
@@ -26,22 +23,25 @@ h1{
     font-size: 120px;
     text-align: center;
     letter-spacing: 1px;
-    
 }
 
 .container{
     background-color: #d8e8ec;
     max-height: auto;
-    min-height: 450px;
+    min-height: 500px;
     width: 100%;
    display:grid; 
    place-items:center;
-   grid-template-columns:1fr 2fr
+   grid-template-columns:1fr 2fr;
+   padding-right: 3%;
+   padding-left:15px ;
 }
 
 .imgcontainer{
-		height:80%;
-		width:80%;
+		height:75%;
+        width:82%;
+        box-shadow: rgba(27, 27, 27, 0.808) 6px 6px 20px;
+        bottom: 100px;
 }
 
 .imgcontainer >img{
@@ -49,25 +49,91 @@ h1{
 		width:100%;
 		object-fit:cover;
 }
+
 .p1{
-    color: #546c79;
+    color: #5c7886;
     text-align: left;
     font-size: 22px;
-	padding:30px;
+    padding:0 30px;
+    padding-bottom: 6%;
     line-height: 1.5;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
 }
 
 .dev{
     background-color: white;
-    height: 700px;
+    height: 170px;
     width :100%;
 }
 .dev-name{
     color:rgba(44, 38, 38, 0.829);
     text-align: center;
-    padding-top: 55px;
+    padding-top: 52px;
     font-size: 80px;
 }
 
+.dev-name > span{ 
+    display: inline-block;
+    color: #52D891;
+    letter-spacing: 20px;
+    -webkit-transform: rotate(320deg);
+    padding-right: 10px;
+    
+}
+
+.devlopers{
+    
+    width: 100%;
+    min-height: 620px;
+    max-height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    align-items: top;
+    padding-top: 4%;
+
+}
+
+.image1{
+    width: 350px;
+    height: 350px;
+    box-shadow: black 5px 5px 10px;
+    
+
+}
+
+.image1 >img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.image1 >p{
+    font-size: 30px;
+    text-align: center;
+    padding-top: 27px;
+    letter-spacing: 2px;
+    color: rgba(32, 11, 6, 0.945);
+    font-weight: bolder;
+    
+    
+    
+}
+.image1 >h3{
+    color: rgba(77, 73, 73, 0.897);
+    font-size: 23px;
+    text-align: center;
+    padding-top: 15px;
+
+}
+.devlopers > a{
+    text-decoration: none;
+    color: inherit;
+}
+ .v1{
+     height:420px;
+     border-left: 2px solid rgba(44, 38, 38, 0.596);
+     box-shadow: rgba(0, 0, 0, 0.705) 1px 1px 2px;
+     
+     
+ }
