@@ -31,13 +31,19 @@
   }
   body{
     
-    background-image: url(https://wallpapercave.com/wp/wp5585354.png);
+    
     overflow-x: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
+    background-color:black;
    
   }
+  #particles-js{
+		position: absolute;
+		height: 100%;
+		width:100%;
+		
+}
+  
+
 
   
    .wrapper {
@@ -89,6 +95,8 @@
     cursor: pointer;
     -webkit-transition: all var(--speed) ease;
     transition: all var(--speed) ease;
+    z-index:1;
+    
   }
   
   .card:hover {
@@ -175,6 +183,5 @@
     -webkit-text-fill-color: transparent;
   }
   
-  
-
+ 
 

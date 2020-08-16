@@ -9,8 +9,9 @@
 
 <body class="bg">
   
-
+  <div id="particles-js"> </div>
 <section class="wrapper">
+ 
  
     <div class="upper"> 
      <!-- BEGIN: card -->
@@ -138,6 +139,13 @@ window.addEventListener ('load', start);
    </section>
 
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+		particlesJS.load('particles-js', '{% static 'Blog/particles.json' %}', function() {
+  console.log('callback - particles.js config loaded');
+  
+});
+</script>
 
 
 {% endblock %}

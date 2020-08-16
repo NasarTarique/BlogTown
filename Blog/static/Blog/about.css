@@ -30,24 +30,24 @@ h1{
     max-height: auto;
     min-height: 500px;
     width: 100%;
-   display:grid; 
-   place-items:center;
-   grid-template-columns:1fr 2fr;
-   padding-right: 3%;
-   padding-left:15px ;
+    display:grid; 
+    place-items:center;
+    grid-template-columns:1fr 2fr;
+    padding-right: 3%;
+    padding-left:15px ;
 }
 
-.imgcontainer{
-		height:75%;
-        width:82%;
-        box-shadow: rgba(27, 27, 27, 0.808) 6px 6px 20px;
-        bottom: 100px;
+.imgcontainer{ 
+    height:75%;
+    width:82%;
+    box-shadow: rgba(27, 27, 27, 0.808) 6px 6px 20px;
+    bottom: 100px;
 }
 
 .imgcontainer >img{
-		height:100%;
-		width:100%;
-		object-fit:cover;
+	height:100%;
+	width:100%;
+	object-fit:cover;
 }
 
 .p1{
@@ -99,6 +99,7 @@ h1{
     height: 350px;
     box-shadow: black 5px 5px 10px;
     
+    
 
 }
 
@@ -108,7 +109,7 @@ h1{
     object-fit: cover;
 }
 
-.image1 >p{
+.desig >p{
     font-size: 30px;
     text-align: center;
     padding-top: 27px;
@@ -119,7 +120,7 @@ h1{
     
     
 }
-.image1 >h3{
+.desig >h3{
     color: rgba(77, 73, 73, 0.897);
     font-size: 23px;
     text-align: center;
@@ -134,6 +135,91 @@ h1{
      height:420px;
      border-left: 2px solid rgba(44, 38, 38, 0.596);
      box-shadow: rgba(0, 0, 0, 0.705) 1px 1px 2px;
-     
-     
- }
+}
+
+@media screen and (max-width:700px){
+    *{
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+    }
+    .main-bg{
+        height: 30vh;
+        
+    }
+
+    h1{
+        font-size: 60px;
+
+    }
+   
+    .container{
+        display: block;
+        padding-top: 20px;
+        max-height: auto;
+        min-height: 400px;
+        padding-bottom: 10px;
+        padding: 0px 10px;
+        
+    }
+    
+    .imgcontainer{
+        display: none;
+    }
+
+    .p1{
+        font-size: 16px;
+        padding: 7px;
+    }
+
+    .dev{
+        padding-left:20px ;
+        height: auto;
+        display:block;
+        place-items: center;
+       
+        
+
+    }
+    .dev-name{
+        font-size: 40px;
+        padding-top: 8px;
+    }
+
+    .devlopers{
+        display: block;
+        place-items: center;
+        padding-top: 30px;
+        height: 700px;
+    }
+
+    
+    .image1{
+        width: 200px;
+        height: 200px;
+        border-radius: 5%;
+        overflow-y: hidden;
+        box-shadow: black 5px 5px 10px;
+        margin-left: 22%;
+    }
+
+    .desig{
+        text-align: left;
+    }
+
+    .desig > p{
+        font-size: 20px;
+        letter-spacing: 0px;
+    }
+
+    .desig > h3{
+        font-size: 16px;
+        padding-bottom: 50px;
+    }
+
+
+    .v1{
+        display: none;
+    }
+
+}
