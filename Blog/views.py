@@ -22,12 +22,18 @@ def read(request, num):
         posts.append(AllBlogs[x])
 
     return render(request, "Blog/reader.html", {
-        "blog": Blog.objects.get(pk=num),
+        "blog": Blog.ebjects.get(pk=num),
         "posts": posts
     })
 
 def contact(request):
-    return render(request, "Blog/contact.html")
+    if request.method == 'POST':
+        return render(request, "Blog/contact.html",{
+            "method":'post'
+        })
+    else:
+        return render(request, "Blog/contact.html", {
+        "method":'get'
+    })
 
-def about(request):
-    return render(request, "Blog/about.html")
+
