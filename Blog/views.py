@@ -22,7 +22,7 @@ def read(request, num):
         posts.append(AllBlogs[x])
 
     return render(request, "Blog/reader.html", {
-        "blog": Blog.ebjects.get(pk=num),
+        "blog": Blog.objects.get(pk=num),
         "posts": posts
     })
 

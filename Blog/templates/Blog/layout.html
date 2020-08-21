@@ -12,32 +12,35 @@
 		<link rel="stylesheet" href="{% static "Blog/nav.css" %}">
         <title>BlogTown</title>
 </head>
-	<nav class="nav">
-	      <div class="nav-menu flex-row">
-			<div class="nav-brand">
-				<a href="{% url 'index' %}" class="brand">BLOG</a>
-				<a href="{% url 'index' %}" class="brand2">TOWN</a>
-			</div>
-                <div>
-				<ul class="nav-items">
-					<li class="nav-links">
-							<a href="{% url 'index' %}">HOME</a>
-					</li>
-					<li class="nav-links">
-							<a href="{% url 'categories' %}">CATEGORIES</a>
-					<li class="nav-links">
-							<a href="{% url 'contact' %}">CONTACT</a>
-					</li>
-					<li class="nav-links">
-							<a href="{% url 'about' %}">ABOUT</a>
-					</li>
-					</ul>
-				</div>
-			</div>
-		
-
+<nav class="nav">
+	<div class="nav-menu flex-row">
+	<div class="nav-brand">
+	
+	<a href="{% url 'index' %}" class="brand">BLOG</a>
+	<a href="{% url 'index' %}" class="brand2">TOWN</a>
+	</div>
+	<div>
+	<input type="checkbox" id="check" style="transform: scale(1.5);">
+	<label for="check" class="checkbtn">
+	<i class="fas fa-bars"></i>
+	</label>
+	<ul class="nav-items">
+	<li class="nav-links">
+	<a href="{% url 'index' %}">HOME</a>
+	</li>
+	<li class="nav-links">
+	<a href="{% url 'categories' %}">CATEGORIES</a>
+	<li class="nav-links">
+	<a href="{% url 'contact' %}">CONTACT</a>
+	</li>
+	<li class="nav-links">
+	<a href="{% url 'about' %}">ABOUT</a>
+	</li>
+	</ul>
+	</div>
+	</div>
 	</nav>
-
+	
 <body class="Body">
 		{% block body %}
 		{% endblock %}

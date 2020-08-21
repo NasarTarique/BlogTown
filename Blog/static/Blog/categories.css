@@ -34,6 +34,7 @@
     
     overflow-x: hidden;
     background-color:black;
+    color:rgb(19, 107, 19);
    
   }
   #particles-js{
@@ -61,21 +62,20 @@
   .wrapper {
     
     width: 100vw;
-    height:89vh;
+    height:90.4vh;
   
     
   }
   .upper{
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 85px;
+    padding-bottom: 100px;
     padding-top: 105px;
-  
-    
   }
   .lower{
     display: flex;
     justify-content: space-evenly;
+    padding-top: 25px;
     
   }
   
@@ -183,5 +183,102 @@
     -webkit-text-fill-color: transparent;
   }
   
- 
+  @media screen and (max-width:1600px){
+    
+    .upper{
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+  }
 
+  @media screen and (max-width:1250px){
+     
+    .upper{
+      padding-top: 110px;
+    }
+    .card{
+    width: 300px;
+    height: 175px;
+  }
+   .card__name{
+     padding-top: 70px;
+     font-size: 1.9rem;
+   }
+
+  }
+  @media screen and (max-width:972px){
+    .upper{
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+      padding-bottom: 0;
+    }
+    .lower{
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+
+    }
+    .wrapper{
+      display: flex;
+      justify-content: space-evenly;
+      height: 750px;
+    }
+    .card{
+      width: 350px;
+      height: 175px;
+    }
+  }
+
+  @media screen and (max-width:800px){
+    .wrapper{
+      display: block;
+      height: auto;
+    }
+    .card{
+      width:75vw;
+      max-width: 700px;
+      height: 200px;
+      max-height: 250px;
+        }
+    .upper{
+      padding-top: 90px;
+      padding-bottom: 0px;
+    }   
+    .lower{
+      padding-bottom: 130px;
+      padding-top: 0px;
+    }
+    .card__name{
+      padding-top: 85px;
+    }
+    
+    .two{
+      top: 20px;
+    }
+    .three{
+      top: 40px;
+    }
+    .four{
+      top: 60px;
+    }
+    .five{
+      top: 80px;
+    }
+    .six{
+      top:100px;
+    }
+
+  }
+  @media screen and (max-width:800px){
+    .card{
+      width:80vw;
+      max-width: 700px;
+      height: 140px;
+  }
+    .card__name{
+    padding-top: 60px;
+    font-size: 25px;
+  }
+
+}
