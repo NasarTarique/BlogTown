@@ -2,3 +2,4 @@ config.json
 *.pyc
 db.sqlite3
 media/
+Blog/config.py
