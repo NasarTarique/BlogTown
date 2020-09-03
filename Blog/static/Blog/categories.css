@@ -34,7 +34,7 @@
     
     overflow-x: hidden;
     background-color:black;
-    color:rgb(19, 107, 19);
+    
    
   }
   #particles-js{
@@ -146,20 +146,29 @@
   
   
   
-  .card__body {
-    display: grid;
-    padding: 0 20px;
+  
+  .stripe{
+    display: block;
+    margin-top: 15%;
+    height: 30px;
+    background-color: #2e965fc7;
+    rotate: 0deg;
+    max-width: 200px;
+    width: 150px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
   }
   
   .card__name {
-    padding-top: 85px;
+    
     align-self: center;
     justify-self: center;
-    margin-bottom: 2px;
-    color: white;
-    font-size: 2.1rem;
-    font-weight: var(--fontLight);
-    letter-spacing: 0.1rem;
+    color: #50d890;
+    font-family: cursive;
+    font-size: 1.28rem;
+    font-weight:550;
+    letter-spacing: 0.08rem;
+    padding-top:3px ;
     text-align: center;
     text-transform: uppercase;
     
@@ -272,12 +281,12 @@
   }
   @media screen and (max-width:800px){
     .card{
-      width:80vw;
+      width:83vw;
       max-width: 700px;
       height: 140px;
   }
     .card__name{
-    padding-top: 60px;
+    padding-top: 59px;
     font-size: 25px;
   }
 

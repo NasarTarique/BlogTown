@@ -71,7 +71,7 @@
     
     }
     .nav-links{
-    padding: 1.5rem 2.5rem;
+    padding: 1.35rem 2.5rem;
     font-size: 1.1rem;
     position: relative;
     }
@@ -180,7 +180,7 @@
     width: 100%;
     background-color: #232a34;
     display: flex;
-    font-family:'Raleway', sans-serif;
+    
     letter-spacing: 3px;
     flex-direction: column;
     justify-content: center;
@@ -188,20 +188,26 @@
 }
 
 .social{
-        margin-top: 4.3vh;
+        margin-top: 3.7vh;
         margin-bottom: 4vh;
         text-align: center;
+        font-family: 'Long Cang', cursive;
+        font-size: 35px;
+        color: rgba(255, 255, 255, 0.842);
         
 }
 
 .content{
       font-size: 30px;
-      margin-top:30px;
+      margin-top:27px;
+      padding-bottom: 4px;
 
 }
 .content > a{
       color:#50d890;
-      padding: 0 5px;
+      padding-left:  5px;
+      padding-right:  5px;
+      padding-bottom: 50px;
       opacity: 0.75;
 }
 
@@ -214,4 +220,24 @@
   font-size: 12.25px;
   padding-top: 11px;
 
+}
+.content > .fb :hover {
+    color: #1877f2;
+    opacity: 1;
+}
+.content > .twtr :hover {
+    color: #00acee;
+    opacity: 1;
+}
+.content > .insta :hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  
+    opacity: 1;
+}
+.content > .utube :hover {
+    color: #c4302b;
+    opacity: 1;
 }

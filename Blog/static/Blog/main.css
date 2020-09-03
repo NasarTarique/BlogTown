@@ -2,11 +2,12 @@ body{
     box-sizing: border-box;
     overflow-x: hidden;
     margin: 0rem;
+    background-color: #EDEDED;
 }
 
 
 main .site-title{
-    background-image: url(../Blog/blogtown.jpg);
+    
     background-size: cover;
     background-position: center;
     height: 50vh;
@@ -18,7 +19,7 @@ main .site-title{
     text-shadow: 3px 4px 3px black;
 }
 .corousel-bg{
-  background-color: #E4E5E4 ;
+  background-color: #b7bdb796 ;
   padding-top: 30px;
   padding-bottom: 15px;
 }
@@ -27,10 +28,10 @@ main .site-title{
 	height: 61vh;
 	overflow:hidden;
   position: relative;
-  width: 66%;
+  width: 68%;
   
   background-color: black;
-  left: 17%;
+  left: 16%;
   
 }
 .home .one{
@@ -117,7 +118,7 @@ main .site-title{
 		animation: fade 1s ease-in-out forwards;
   }
   
-.home .caption .genre{
+/*.home .caption .genre{
  display: inline-block;
  padding:5px 15px;
  background-color:transparent;
@@ -127,7 +128,7 @@ main .site-title{
  border: 2px solid white;
  animation: fade 1s ease-in-out ;
  margin-top: 20px;
-}
+}*/
 
 @keyframes captionText{
 	0%{
@@ -217,12 +218,34 @@ main .site-title{
 		display: none;
 	}
 }
+.line{
+  height: 1.5px;
+  width: 120px;
+  border: 2.5px solid #50d88fa9;
+  border-radius: 40px;
+  margin-top: 6.5px;
+}
+
+.blog-card-head{
+  font-size: 33px;
+  font-weight: 900;
+  padding-bottom:40px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 600;
+  color:rgba(41, 39, 38, 0.925);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+  letter-spacing: 2px;
+}
 
 .blog-cards{
   display: flex;
   justify-content: space-evenly;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right:30px;
+  padding-left: 30px;
 }
 
 .blog-card{
@@ -231,8 +254,7 @@ main .site-title{
 }
 
 .row2{
-  padding-top: 35px;
-  padding-bottom: 30px;
+  padding-bottom: 40px;
 }
 
 
@@ -246,8 +268,7 @@ main .site-title{
 
 
 .square{
-  width: 310px;
-	height: 430px;
+  width: 315px;
 	background: white;
   border-radius: 2px;
   box-shadow: 0px 20px 50px #D9DBDF;
@@ -256,24 +277,47 @@ main .site-title{
   transition: all 0.3s ease; 
 }
 
+.blog-card > .one{
+  height: 440px;
+}
+.blog-card > .two{
+  height: 400px;
+}
+.blog-card > .three{
+  height: 440px;
+}
+.blog-card > .four{
+  height: 400px;
+  margin-top: 40px;
+}
+.blog-card > .five{
+  height: 460px;
+}
+.blog-card > .six{
+  height: 400px;
+  margin-top: 40px;
+}
+
+
 .mask{
-  clip: rect(0px, 310px, 220px, 0px);
+  clip: rect(0px, 315px, 200px, 0px);
   border-radius: 2px;
   position: absolute;
 }
 
 img{
-  width: 310px;
+  width: 315px;
   }
 
  .blog-card .h1{
   margin: auto;
   text-align: left;
-  margin-top: 230px;
+  margin-top: 210px;
   padding-left: 20px;
-  
+  padding-right: 20px;
+  padding-top: 5px;
   font-family: 'Merriweather', serif;
-  font-size: 23px;
+  font-size: 21px;
 }
 .blog-card p{
  text-align: justify; 
@@ -286,32 +330,68 @@ img{
  padding-top: 12px;
 }
 
-.blog-card .button {
-    background-color: #34CCB4;
-    color: white;
-    width: 90px;
-    padding: 10px 18px;
-    border-radius: 3px;
-    text-align: center;
-    text-decoration: none;
-    display: block;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 80px;
-    font-size: 12px;
-    cursor: pointer; 
-  
-  }
 .mid-bg{
   padding-top: 30px;
-  background-color: #E4E5E4;
-  margin-right: 12%;
-  margin-left: 12%;
+  background-color:#b7bdb700;
+  margin-right: 11%;
+  margin-left: 11%;
   
 }
 .side-bg{
-  background-color: #E4E5E4;
+  background-color:#EDEDED;
+  margin-bottom: 30px;
 }
+.top-picks{
+  background-color: rgb(224, 240, 222);
+}
+
+.top-picks .cards{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 20px;
+  padding-bottom: 40px;
+}
+
+.top-picks > .head{
+  font-size: 33px;
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  padding-bottom: 35px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.card:hover {
+  -webkit-transform: translate(20px, -10px);
+  -ms-transform: translate(10px, -10px);
+  transform: translate(10px, -10px);
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: all ease 0.3s;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+ 
+   }
+
+.top-picks > .card {
+}
+ .imgbox{
+  height: 275px;
+  width: 250px;
+  opacity: 1;
+  border-radius: 1px;
+}
+
+.head > .lined{
+  height: 1.5px;
+  width: 65px;
+  border: 2.5px solid #53bb83b6;
+  border-radius: 40px;
+  margin-top: 6.5px;
+}
+
 
 
 
