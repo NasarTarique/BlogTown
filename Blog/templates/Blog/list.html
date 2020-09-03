@@ -1,6 +1,22 @@
-{% extends 'layout.html' %}
+{% extends 'Blog/layout.html' %}
+{% load static %}
 {% block css %}
+<link rel="stylesheet" href="{% static 'Blog/list.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 {% endblock %}
-
 {% block body %}
+<div class="header-container">
+<div class="vid-container">
+		<video autoplay muted loop src="{% static 'Blog/stockholm.mp4' %}"></video>
+</div>
+<div class="overlay"></div>
+<div class="header-content">
+<h1>BLOG<span>TOWN</span></h1>
+<p>Your Place For Entertainment </p>
+<div>		<a href="" class="btn" >Explore </a> </div>
+
+</div>
+</div>
+<div class="waste"></div>
 {% endblock %}

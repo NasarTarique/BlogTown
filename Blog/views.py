@@ -58,3 +58,5 @@ def contact(request):
     })
 
 
+def list(request):
+    return render(request, "Blog/list.html")
