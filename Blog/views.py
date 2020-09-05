@@ -6,7 +6,6 @@ from smtplib import SMTP
 from . import config 
 
 from .models import Blog
-# Create your views here.
 
 
 def index(request):
@@ -22,13 +21,13 @@ def about(request):
 
 
 def read(request, num):
-    AllBlogs = Blog.objects.all()
+    AllBlogs = Blog.objects.filter(mode="Published")
     posts = []
     for x in range(0, 6):
         posts.append(AllBlogs[x])
 
     return render(request, "Blog/reader.html", {
-        "blog": Blog.objects.get(pk=num),
+        "blog": Blog.objects.filter(mode="Published").get(pk=num),
         "posts": posts
     })
 
