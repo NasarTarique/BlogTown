@@ -58,4 +58,6 @@ def contact(request):
 
 
 def list(request):
-    return render(request, "Blog/list.html")
+    return render(request, "Blog/list.html",{
+        'blog':Blog.objects.all()
+    })

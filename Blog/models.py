@@ -33,6 +33,7 @@ class Blog(models.Model):
         ("Published", "Published"),
     )
     title = models.CharField(max_length=85, unique=True)
+    subheading = models.CharField(max_length=140)
     authorUsername = models.ForeignKey(Author, default='anonymous', on_delete=models.SET_DEFAULT)
     content = MarkdownxField()
     image = models.ImageField(default='neofetch.jpg')

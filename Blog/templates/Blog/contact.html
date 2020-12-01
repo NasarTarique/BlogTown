@@ -7,42 +7,31 @@
 {% endblock %}
 
 {% block body %}
-<div class="container" data-method="{{method}}">
-	<div id="particles-js"> </div>
-		   {% if method == 'get' %}
-			<div class="form-container">
-					<form action="/Blog/contact" method="POST">
+		<form action="/Blog/contact" method="POST">
 							{% csrf_token %}
-			<div class="form-info">
-			        <div class="form-name">
-							<h3>NAME</h3>
-							<div><input id="name-input"type="text" name="name" placeholder="" tabindex="1"></div>
-					</div>
-			        <div class="form-mail">
-							<h3>E-MAIL</h3>
-							<div><input id="mail-input" type="text" name="mail" placeholder='' tabindex="2"></div>
-			        </div>
-			</div>
-			<div class="form-content">
-					<h3>CONTENT</h3>
-					<div class="write-content"><textarea id="textarea" name="content" placeholder="" cols="27" rows="10"></textarea></div>
-					<div class="form-submit"><h3>SUBMIT</h3></div>
-			</div>
-			</form>
-		</div>
+							<section class="contact" data-method={{method}}>
+				{% if method == 'get' %}
+				
+				<div class="form-container">
+						
+						<div class="form-name"><p><h2>Name</h2>
+								<input type="text" placeholder="" id="name-input" name="name" tabindex="1">
+								</p></div>
+						<div class="form-mail"><p><h2>Email</h2>
+								<input type="text" placeholder="" id="mail-input" name="mail" tabindex="2">
+								</p></div>
+						<div class="form-content"><p><h2>Message</h2>
+								<textarea id="message" name="content" placeholder="" cols="30" rows="10"></textarea>
+								</p></div>
+				<div class="submit-button"><h2>SUBMIT</h2></div>
+				</div>
 		{% else %}
 		<div class="form-submitted">
 		        <h1>Your Message Has Been Sent . We Will Send A Reply within 24 hours</h1>
 		        <div class="back-button"><h2>BACK</h2></div>
 		</div>
 		{% endif %}
-</div>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-		particlesJS.load('particles-js', '{% static 'Blog/particles.json' %}', function() {
-  console.log('callback - particles.js config loaded');
-  
-});
-</script>
+				</section>
+		</form>
 {% endblock %}
  

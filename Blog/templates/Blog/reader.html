@@ -15,14 +15,22 @@
 		</div>
 
 <div class="blog-content">
-		<h1>{{blog.title| upper}}</h1>
+		<h1 class="blog-title">{{blog.title| upper}}</h1>
 		<div class="img-container"><img src="{{blog.image.url}}" alt=""></div>
 		<div class="text" >{{blog.content |markdownify}}</div>
 </div>
 <div class="author">
-		<div class="author-img"><h4>AUTHOR</h4><div class="authorimg-container"><img src="{{blog.authorUsername.authorImage.url}}" alt=""></div>
+		<div class="author-img">
+				<div class="author-block1">
+				<h4>AUTHOR</h4>
+				<div class="authorimg-container">
+						<img src="{{blog.authorUsername.authorImage.url}}" alt="">
+				</div>
+				</div>
+				<div class="author-block2">
 				<div class="author-bio"><p>{{blog.authorUsername.authorBio}}</p></div>
-		<h2>{{blog.authorUsername.authorName}}</h2>
+				<h2>{{blog.authorUsername.authorName}}</h2>
+				</div>
 
 	</div>
 </div>

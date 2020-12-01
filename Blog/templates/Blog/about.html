@@ -2,74 +2,71 @@
 {% block css %}
 {% load static %}
 <link rel="stylesheet" href="{% static 'Blog/about.css' %}">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display&display=swap" rel="stylesheet">  
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 {% endblock %}
 
 {% block body %}
 
 <body>
 
-    <div class="main-bg">
-        <h1>
-            About Us
-        </h1>
+    <div class="main-header">
+      <div class="main-header-inner">
+        <h1>ABOUT US</h1>
+      </div>
     </div>
-    <hr style="height: 1px;border: 2.55px solid #476968;">
-    
-
-    
-    <div class="container">
-			<div class="imgcontainer"><img src="{% static 'Blog/type.jpg' %}" alt=""></div>
-		<div class="p1">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde corrupti reiciendis iste dolor rerum doloremque sint quod, architecto, optio sequi quas quis ipsum quidem esse, obcaecati officiis reprehenderit cupiditate voluptate autem dicta placeat soluta! Ipsa fugit laudantium ipsum totam. Eos tenetur, animi quas nesciunt facilis modi obcaecati ipsa rem odit repellat sapiente velit perspiciatis quisquam maxime voluptatum repudiandae numquam, iure quis maiores earum sint, laborum dolore? Ab voluptas eaque necessitatibus expedita repellendus iure recusandae, amet quas, perspiciatis temporibus atque itaque ad! Praesentium ullam molestiae iusto neque adipis.
-        </p>
-		</div>
-
-    </div>
-    <div class="dev">
-        <h1 class="dev-name">
-             DEVELOPER<span >S</span>
-        </h1>
-        
+    <div class="about-container" data-aos="fade-left">
+      <h1>BLOG<span>TOWN</span></h1>
+      <p>An Open Source Blogsite that brings you the best entertainment blog</p>
     </div>
 
-    <div class="devlopers">
-        <a href="#">
-        <div class="image1"><img src="{%static 'Blog/dev1.jpg'%}" alt=""></div>
-        <div class="desig"> 
-       <p>
-           TARIQUE NASAR
-       </p>
-    
-       <h3>
-           (Co-Founder / Software Developer)
-       </h3>
+    <div class="devlopers-container">
+      <div class="dev-heading">
+        <h1>DEVELOPER<span>S</span></h1>
+      </div>
+      <div class="dev-card"  data-aos="fade-left">
+        <img src="https://unsplash.it/1920/1080" alt="" />
+        <div class="dev-details">
+          <h1>TARIQUE NASAR</h1>
+          <p>Dolor quos facilis officiis quia molestias fuga ipsam quod? Praesentium repellendus maiores itaque ad mollitia. Optio ratione laboriosam consequuntur sint.
+          </p>
+          <p class="dev-links">
+            <a class="fb" href="#"><span class="fab fa-facebook"></span></a>
+            <a class="twtr" href="#"><span class="fab fa-twitter"></span></a>
+            <a class="insta" href="#"><span class="fab fa-instagram"></span></a>
+            <a class="utube" href="#"><span class="fab fa-youtube"></span></a>
+          </p>
+        </div>
+      </div>
+      <div class="dev-card devtwo" data-aos="fade-right">
+			  <img src="{% static 'Blog/devl2.jpg' %}" alt="" />
+        <div class="dev-details">
+          <h1>SHUBHAM MITTAL</h1>
+          <p>
+            Web Developer<br />
+            Co-Founder:BlogTown
+          </p>
+          <p class="dev-links">
+            <a class="fb" href="#"><span class="fab fa-facebook"></span></a>
+            <a class="twtr" href="#"><span class="fab fa-twitter"></span></a>
+            <a class="insta" href="#"><span class="fab fa-instagram"></span></a>
+            <a class="utube" href="#"><span class="fab fa-youtube"></span></a>
+          </p>
+        </div>
+      </div>
     </div>
-       </a>
-       <div class="v1">
-           
-       </div>
-       <a href="#">
-    <div class="image1"><img src="{%static 'Blog/dev2.jpg'%}" alt=""> </div>
-    <div class="desig"> 
-        <p>
-           SHUBHAM  MITTAL
-        </p>
-        <h3>
-            (Co-Founder / Web Developer)
-        </h3>
-     </div>
-    </div>      
-    </a>
-       
-    </div>
-
-
-
-
-
-
+	<div class="footer"></div>
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+		  AOS.init({
+				  offset:400,
+				  duration:1000,
+				  anchorPlacement:'top-bottom'
+		  });
+  </script>
 
 
 

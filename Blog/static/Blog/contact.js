@@ -1,4 +1,4 @@
-function  isempty(tag){
+function  notempty(tag){
 		if(tag.value === null || tag.value === undefined || tag.value === ''){
 				tag.style.color = '#FF4949'
 				tag.placeholder = 'Required'
@@ -10,13 +10,13 @@ function  isempty(tag){
 
 document.addEventListener('DOMContentLoaded',()=>{
 		
-		let method  = document.querySelector('.container').dataset.method;
+		let method  = document.querySelector('.contact').dataset.method;
 
 		if( method === 'get' ){
 
 		let contactname = document.querySelector('#name-input')
 		let contactmail = document.querySelector("#mail-input")	
-		let mailcontent = document.querySelector("#textarea") 
+		let mailcontent = document.querySelector("#message") 
 		
 		contactmail.addEventListener('click', ()=>{
 				if(contactmail.placeholder != ''){
@@ -39,12 +39,13 @@ document.addEventListener('DOMContentLoaded',()=>{
 				}
 		})
 
-		document.querySelector(".form-submit").addEventListener('click',()=>{
-				if(isempty(contactname) && isempty(contactmail) && isempty(mailcontent)){
+		document.querySelector(".submit-button").addEventListener('click',()=>{
+				console.log('yo')
+				if(notempty(contactname) && notempty(contactmail) && notempty(mailcontent)){
 												document.querySelector('form').submit()
 				}else{
-						isempty(contactmail)
-						isempty(mailcontent)
+						notempty(contactmail)
+						notempty(mailcontent)
 				}
 
 		})
