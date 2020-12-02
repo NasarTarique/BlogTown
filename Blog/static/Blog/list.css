@@ -22,12 +22,13 @@ body{
 		-webkit-background-clip:text;
 		color:transparent;
 		font-size:150px;
-		line-height:50vh;
+		padding-top:2rem;
 }
 .grid-container{
 		margin:0 15% 0 15%;
 		display:flex;
 		align-items:center;
+		justify-content:center;
 		flex-direction:row;
 		gap:2em;
 		padding:1em;

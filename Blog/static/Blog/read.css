@@ -3,8 +3,8 @@ body {
 }
 .blog-container {
   display: grid;
-  grid-template-columns: 1fr 4fr 2fr;
-}
+  grid-template-columns: 1fr 4fr 2fr; 
+  }
 .blog-content {
   position: relative;
   max-width: 1100px;
@@ -33,7 +33,7 @@ body {
   color: white;
   font-weight: 800;
 }
-.genre > h3 {
+genre > h3 {
   font-family: "Montserrat", sans-serif;
   color: floralwhite;
 }
@@ -98,21 +98,32 @@ body {
 .author-block1 > h4{
 		color: #563c41;
 		padding:1em;
+		font-size:1rem;
 
 }
 .author-block2{
 		margin:auto;
 		text-align:center;
 }
+.author-block2 > h2{
+		color: #563c41;
+		font-family:'Dancing Script',cursive;
+		font-size:2rem;
+		margin-top:1rem;
+}
 .author-bio{
 		display:flex;
 		margin:auto;
 		background-color:white;
 		max-width:300px;
-		min-height:150px;
 		justify-content:center;
 		text-align:center;
+		font-size:1rem;
+		margin-top:1rem;
 
+}
+.author-bio > p{
+		padding:1.5rem;
 }
 .blog-content a {
   color: green;
@@ -145,7 +156,7 @@ blockquote p {
   margin-top: 70px;
   margin-left: 10ch;
   margin-right: 10ch;
-  display: none;
+  display: flex;
   height: 42vh;
   align-items: center;
   justify-content: space-evenly;
@@ -155,10 +166,10 @@ blockquote p {
   overflow-x: hidden;
 }
 .post-card {
-  height: 35vh;
+  height: 33vh;
   position: relative;
   display: none;
-  width: 35ch;
+  width: 30ch;
   border-radius: 5px;
   line-height: 20px;
   background-color: white;
@@ -178,9 +189,7 @@ blockquote p {
   object-fit: cover;
 }
 .post-content {
-  margin-top: 13px;
-  margin-left: 15px;
-  width: 33ch;
+		padding:1rem;
 }
 .post-category {
   margin-bottom: 5px;
@@ -204,8 +213,7 @@ blockquote p {
   color: grey;
 }
 .post-card:hover {
-  height: 40vh;
-  width: 38ch;
+  scale : 1.1;
   cursor: pointer;
 }
 .left-icon {
@@ -213,16 +221,16 @@ blockquote p {
   height: 35px;
   width: 35px;
   font-size: 35px;
-  left: 1%;
+  left: 0%;
   color: #50d890;
   z-index: 1000;
 }
 .right-icon {
-  position: absolute;
+position: absolute;
   height: 35px;
   width: 35px;
   font-size: 35px;
-  right: 1%;
+  right: 0%;
   color: #50d890;
   z-index: 1000;
 }
@@ -241,6 +249,28 @@ blockquote p {
     display: flex;
     flex-direction: column;
   }
+  .posts-container{
+  margin-left:0ch;
+  margin-right:0ch;
+  }
+  .author{
+		  margin-top:5vh;
+  }
+}
+@media (max-width: 950px) {
+  .post-card{
+		  scale:0.9;
+  }	
+.post-card:hover {
+  scale : 1;
+}
+.right-icon, .left-icon{
+ scale:0.8;
+}
+.author{
+		scale:0.9;
+}
+
 }
 @media (max-width: 800px) {
   .text > * {
@@ -254,6 +284,7 @@ blockquote p {
     font-size: 16px;
     word-spacing: 4px;
   }
+		
 }
 @media (max-width: 500px) {
   .text {
