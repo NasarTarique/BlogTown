@@ -58,6 +58,14 @@ def contact(request):
 
 
 def list(request):
-    return render(request, "Blog/list.html",{
-        'blog':Blog.objects.all()
+    allblogs = Blog.objects.all();
+    half = int(len(allblogs)/2)
+    second = len(allblogs) - half 
+    grid1 = [allblogs[x] for x in range(0, half)] 
+    grid2 = [allblogs[x] for x in range(half+1, half+second)] 
+    return render(request, "Blog/list.html", {
+        'grid1': grid1,
+        'grid2': grid2,
+        'genre': "BLOGS"
+
     })
