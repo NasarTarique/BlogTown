@@ -25,14 +25,15 @@
     height: 0;
     min-height: 8vh;
     z-index:1000;
-    font-family:'Raleway', sans-serif;
+    font-family:'Noto Sans', sans-serif;
     }
     .nav-brand{
     display: flex;
+    font-family:'Playfair Display', serif;
     }
     .brand {
-    font-size: 1.9rem;
-    padding: 1rem 0;
+    font-size: 1.65rem;
+    padding: 0.85rem 0;
     color:white;
     padding-left: 2rem;
     letter-spacing: 2px;
@@ -53,8 +54,8 @@
     display: none;
     }
     .brand2 {
-    font-size: 1.9rem;
-    padding: 1rem 0;
+    font-size: 1.65rem;
+    padding: 0.85rem 0;
     color:#50d890;
     letter-spacing:2px;
     font-weight:600;
@@ -188,11 +189,11 @@
 }
 
 .social{
-        margin-top: 3.7vh;
+        margin-top: 4.25vh;
         margin-bottom: 4vh;
         text-align: center;
-        font-family: 'Long Cang', cursive;
-        font-size: 35px;
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 23px;
         color: rgba(255, 255, 255, 0.842);
         
 }
@@ -240,4 +241,38 @@
 .content > .utube :hover {
     color: #c4302b;
     opacity: 1;
+}
+
+#scroll {
+    position:fixed;
+    right:30px;
+    bottom:30px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color:#50D890;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-11.5px;
+    margin-top:-19px;
+    height:0;
+    width:0;
+    border:12px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:#000000;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+#scroll:hover span{
+    border-bottom-color:#50D890;
 }
