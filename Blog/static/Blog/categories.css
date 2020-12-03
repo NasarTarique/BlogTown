@@ -153,8 +153,7 @@
     height: 30px;
     background-color: #2e965fc7;
     rotate: 0deg;
-    max-width: 200px;
-    width: 150px;
+    width: 130px;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
   }
@@ -164,7 +163,7 @@
     align-self: center;
     justify-self: center;
     color: #50d890;
-    font-family: cursive;
+    font-family: 'Lora', serif;
     font-size: 1.28rem;
     font-weight:550;
     letter-spacing: 0.08rem;
@@ -183,11 +182,6 @@
   }
   
   .card:hover .card__name {
-    background: -webkit-linear-gradient( 
-      10deg,
-      #9effed,
-      #8c9efa,black
-    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
