@@ -2,6 +2,7 @@
 {% load static %}
 {% block css %}
 <link rel="stylesheet" href="{% static 'Blog/list.css' %}">
+<script src="{% static 'Blog/list.js' %}"></script>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700;800;900&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 {% endblock %}
@@ -9,7 +10,8 @@
 <div class="category-banner"><h1>{{genre}}</h1></div>
     <div class="grid-container">
       <div class="grid-1">
-			  {% for blog in grid1 %}
+			  {% for blog in page_obj  %}
+			  {% if forloop.counter|divisibleby:2 %}
         <div class="post">
 				<div class="img-container"><img src="{{blog.image.url}}" alt="" /></div>
 		  <div class="like-bar"><div class="like-icons"><div class="like"></div>
@@ -22,10 +24,15 @@
 		  <div class="read-btn"><a href="{% url 'read' blog.pk %}">Read more</a></div>
         </div>
 				
+
+		{% endif %}
 			  {% endfor %}
       </div>
       <div class="grid-2">
-			  {% for blog in grid2 %}
+			  {% for blog in page_obj  %}
+
+			  {% if forloop.counter|divisibleby:2 %}
+			  {% else %}
         <div class="post">
 				<div class="img-container"><img src="{{blog.image.url}}" alt="" /></div>
 		  <div class="like-bar"><div class="like-icons"><div class="like"></div>
@@ -38,7 +45,11 @@
 		  <div class="read-btn"><a href="{% url 'read' blog.pk %}">Read more</a></div>
         </div>
 				
+		{% endif %}
 			  {% endfor %}
     </div>
+
+	</div>
+	<div class="observer" style="height:20vh">
 	</div>
 {% endblock %}

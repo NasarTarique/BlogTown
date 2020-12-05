@@ -1,4 +1,6 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
+from django.http import Http404
 
 
 import ssl
@@ -57,15 +59,33 @@ def contact(request):
     })
 
 
+def post(request):
+    allblogs = Blog.objects.all()
+    paginator = Paginator(allblogs, 2)
+    page_number = int(request.GET.get('page'))
+    page_obj = paginator.get_page(page_number)
+    if page_number > paginator.num_pages:
+        return None
+    if request.GET.get('grid') == '2':
+        return render(request, "Blog/posts2.html", {
+            'page_obj': page_obj,
+            'pn':page_number
+        })
+    else:
+        return render(request, "Blog/posts.html",{
+            'page_obj': page_obj,
+            'pn':page_number
+        })
+        
+
+
 def list(request):
-    allblogs = Blog.objects.all();
-    half = int(len(allblogs)/2)
-    second = len(allblogs) - half 
-    grid1 = [allblogs[x] for x in range(0, half)] 
-    grid2 = [allblogs[x] for x in range(half+1, half+second)] 
+    allblogs = Blog.objects.all()
+    paginator = Paginator(allblogs, 4)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     return render(request, "Blog/list.html", {
-        'grid1': grid1,
-        'grid2': grid2,
+        'page_obj': page_obj,
         'genre': "BLOGS"
 
     })

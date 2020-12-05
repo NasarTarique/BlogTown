@@ -7,5 +7,6 @@ urlpatterns = [
     path('<int:num>', views.read, name="read"),
     path('contact', views.contact, name="contact"),
     path('about', views.about, name="about"),
-    path('list', views.list, name="list")
+    path('list', views.list, name="list"),
+    path('post', views.post, name="post")
 ]

@@ -39,18 +39,28 @@ body{
 		flex-direction:column;
 }
 .grid-1:first-child{
-		padding-top:300px;
+		padding-top:100px;
 }
 .post{
 		max-width:520px;
 		min-height:400px;
 		/* background-color:rgba(0,0,0,0.8); */
 		background-color:white;
+		animation-name:postpop;
+		animation-duration:500ms;
 		font-size:20px;
 		/* border-radius:25px; */
 		font-family:'Raleway', sans-serif;
 		/* box-shadow:4px 5px 5px 3px rgba(0, 0, 0, 0.2) */
 
+}
+@keyframes postpop{
+		0%{
+				scale:0.8;
+		}
+		100%{
+		scale : 1;
+		}
 }
 .img-container{
 		height:260px;
