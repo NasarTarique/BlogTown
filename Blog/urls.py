@@ -8,5 +8,6 @@ urlpatterns = [
     path('contact', views.contact, name="contact"),
     path('about', views.about, name="about"),
     path('list', views.list, name="list"),
-    path('post', views.post, name="post")
+    path('post', views.post, name="post"),
+    path('<str:genre>', views.genre, name="genre")
 ]

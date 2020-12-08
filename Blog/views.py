@@ -60,32 +60,85 @@ def contact(request):
 
 
 def post(request):
-    allblogs = Blog.objects.all()
+    genre = request.GET.get("genre")
+    if genre == "anime":
+        allblogs = Blog.objects.filter(genre="Anime")
+    elif genre == "movies":
+        allblogs = Blog.objects.filter(genre="Movies")
+    elif genre == "series":
+        allblogs = Blog.objects.filter(genre="Series")
+    elif genre == "novels":
+        allblogs = Blog.objects.filter(genre="Novels")
+    elif genre == "sports":
+        allblogs = Blog.objects.filter(genre="Sports")
+    elif genre == "poetry":
+        allblogs = Blog.objects.filter(genre="Poetry")
+    else:
+        allblogs = Blog.objects.all()
     paginator = Paginator(allblogs, 2)
     page_number = int(request.GET.get('page'))
     page_obj = paginator.get_page(page_number)
+    posts = []
+    for x in range(0, len(page_obj), 2):
+        if (x+1) >= len(page_obj):
+            tup = tuple((page_obj[x], None))
+            print(tup)
+        else:
+            tup = tuple((page_obj[x], page_obj[x+1]))
+        posts.append(tup)
     if page_number > paginator.num_pages:
         return None
-    if request.GET.get('grid') == '2':
-        return render(request, "Blog/posts2.html", {
-            'page_obj': page_obj,
-            'pn':page_number
-        })
     else:
         return render(request, "Blog/posts.html",{
-            'page_obj': page_obj,
-            'pn':page_number
+            'posts': posts
         })
-        
 
 
 def list(request):
     allblogs = Blog.objects.all()
     paginator = Paginator(allblogs, 4)
-    page_number = request.GET.get('page')
+    page_number = int(request.GET.get('page', 1))
     page_obj = paginator.get_page(page_number)
+    posts = []
+    for x in range(0, len(page_obj), 2):
+        if (x+1) >= len(page_obj):
+            tup = tuple((page_obj[x], None))
+        else:
+            tup = tuple((page_obj[x], page_obj[x+1]))
+        posts.append(tup)
+    if page_number > paginator.num_pages:
+        return None
     return render(request, "Blog/list.html", {
-        'page_obj': page_obj,
+        'page_obj': posts,
         'genre': "BLOGS"
+    })
 
+def genre(request, genre):
+    if genre == "anime":
+        allblogs = Blog.objects.filter(genre="Anime")
+    elif genre == "movies":
+        allblogs = Blog.objects.filter(genre="Movies")
+    elif genre == "series":
+        allblogs = Blog.objects.filter(genre="Series")
+    elif genre == "novels":
+        allblogs = Blog.objects.filter(genre="Novels")
+    elif genre == "sports":
+        allblogs = Blog.objects.filter(genre="Sports")
+    elif genre == "poetry":
+        allblogs = Blog.objects.filter(genre="Poetry")
+    paginator = Paginator(allblogs, 4)
+    page_number = int(request.GET.get('page', 1))
+    page_obj = paginator.get_page(page_number)
+    posts = []
+    for x in range(0, len(page_obj), 2):
+        if (x+1) >= len(page_obj):
+            tup = tuple((page_obj[x], None))
+        else:
+            tup = tuple((page_obj[x], page_obj[x+1]))
+        posts.append(tup)
+    if page_number > paginator.num_pages:
+        return None
+    return render(request, "Blog/list.html", {
+        'page_obj': posts,
+        'genre': genre 
     })

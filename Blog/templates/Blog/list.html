@@ -7,49 +7,39 @@
  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 {% endblock %}
 {% block body %}
-<div class="category-banner"><h1>{{genre}}</h1></div>
+<div class="category-banner"><h1>{{genre | upper}}</h1></div>
     <div class="grid-container">
       <div class="grid-1">
 			  {% for blog in page_obj  %}
-			  {% if forloop.counter|divisibleby:2 %}
+			  <div class="post-container">
+
         <div class="post">
-				<div class="img-container"><img src="{{blog.image.url}}" alt="" /></div>
+				<div class="img-container"><img src="{{blog.0.image.url}}" alt="" /></div>
 		  <div class="like-bar"><div class="like-icons"><div class="like"></div>
 <div class="likecount">120</div></div>
 <div class="share-icons"><div class="sharecircles"></div>
 <div class="sharecircles"></div>
 <div class="sharecircles"></div></div></div>
-		  <div class="post-title">{{blog.title | upper}}</div>
-		  <p>{{blog.subheading}}</p>
-		  <div class="read-btn"><a href="{% url 'read' blog.pk %}">Read more</a></div>
+		  <div class="post-title">{{blog.0.title | upper}}</div>
+		  <p>{{blog.0.subheading}}</p>
+		  <div class="read-btn"><a href="{% url 'read' blog.0.pk %}">Read more</a></div>
         </div>
-				
 
-		{% endif %}
-			  {% endfor %}
+        <div class="post post2">
+				<div class="img-container"><img src="{{blog.1.image.url}}" alt="" /></div>
+		  <div class="like-bar"><div class="like-icons"><div class="like"></div>
+<div class="likecount">120</div></div>
+<div class="share-icons"><div class="sharecircles"></div>
+<div class="sharecircles"></div>
+<div class="sharecircles"></div></div></div>
+		  <div class="post-title">{{blog.1.title | upper}}</div>
+		  <p>{{blog.1.subheading}}</p>
+		  <div class="read-btn"><a href="{% url 'read' blog.1.pk %}">Read more</a></div>
+        </div>
+			  </div>
+		{% endfor %}
       </div>
-      <div class="grid-2">
-			  {% for blog in page_obj  %}
-
-			  {% if forloop.counter|divisibleby:2 %}
-			  {% else %}
-        <div class="post">
-				<div class="img-container"><img src="{{blog.image.url}}" alt="" /></div>
-		  <div class="like-bar"><div class="like-icons"><div class="like"></div>
-<div class="likecount">120</div></div>
-<div class="share-icons"><div class="sharecircles"></div>
-<div class="sharecircles"></div>
-<div class="sharecircles"></div></div></div>
-		  <div class="post-title">{{blog.title | upper}}</div>
-		  <p>{{blog.subheading}}</p>
-		  <div class="read-btn"><a href="{% url 'read' blog.pk %}">Read more</a></div>
-        </div>
-				
-		{% endif %}
-			  {% endfor %}
-    </div>
-
 	</div>
-	<div class="observer" style="height:20vh">
+	<div class="observer" data-genre="{{genre}}" style="height:20vh">
 	</div>
 {% endblock %}
