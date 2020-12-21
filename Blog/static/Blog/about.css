@@ -16,6 +16,8 @@ body{
 		height:100%;
 		display:flex;
 		background:url("about.jpg");
+		background-size:cover;
+		color:white;
 		clip-path:ellipse(100% 95% at 50% 0%);
 		text-align:center;
 		align-items:center;
@@ -76,7 +78,7 @@ body{
 		margin-bottom:2rem;
 }
 .dev-card img{
-		height:350px;
+		min-height:350px;
 		width:100%;
 }
 .dev-details{
@@ -106,6 +108,9 @@ body{
 		color:#50d890;
 }
 @media(max-width:700px){
+		.dev-card img {
+				min-height:100px;
+		}
 		.dev-card{
 				display:block;
 		}
@@ -113,5 +118,54 @@ body{
 				padding-right:0;
 				padding-top:1rem;
 				padding-left:0;
+		}
+		.devlopers-container{
+				margin-top:1rem;
+		}
+}
+@media(max-width:550px){
+		.main-header-inner h1{
+				font-size: 6rem;
+		}
+		.about-container h1{
+				font-size:4rem;
+		}
+		.about-container p{
+				font-size: 1.5rem;
+		}
+		.dev-heading h1 {
+				font-size:3.5rem;
+		}
+		.dev-details h1{
+				font-size:1.5rem;
+		}
+		.dev-details p{
+				font-size: 1rem;
+		}
+		.dev-links a {
+				font-size:1.5rem;
+		}
+}
+@media(max-width:370px){
+		.main-header-inner h1{
+				font-size: 4rem;
+		}
+		.about-container h1{
+				font-size:3.5rem;
+		}
+		.about-container p{
+				font-size: 1.2rem;
+		}
+		.dev-heading h1 {
+				font-size:3rem;
+		}
+		.dev-details h1{
+				font-size:1rem;
+		}
+		.dev-details p{
+				font-size: 0.9rem;
+		}
+		.dev-links a {
+				font-size:1.3rem;
 		}
 }

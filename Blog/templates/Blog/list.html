@@ -24,7 +24,7 @@
 		  <p>{{blog.0.subheading}}</p>
 		  <div class="read-btn"><a href="{% url 'read' blog.0.pk %}">Read more</a></div>
         </div>
-
+		{% if blog.1 %}
         <div class="post post2">
 				<div class="img-container"><img src="{{blog.1.image.url}}" alt="" /></div>
 		  <div class="like-bar"><div class="like-icons"><div class="like"></div>
@@ -36,6 +36,7 @@
 		  <p>{{blog.1.subheading}}</p>
 		  <div class="read-btn"><a href="{% url 'read' blog.1.pk %}">Read more</a></div>
         </div>
+		{% endif %}
 			  </div>
 		{% endfor %}
       </div>

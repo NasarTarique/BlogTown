@@ -74,8 +74,7 @@ textarea{
 		background:rgba(0,0,0,0.0);
 }
 .submit-button{
-		padding:10px;
-		min-height:55px;
+		padding:1em;
 		background-color:#50d890;
 		text-align:center;
 
@@ -97,8 +96,7 @@ textarea{
   place-items: center;
 }
 .back-button {
-  height: 48px;
-  width: 200px;
+  max-width: 200px;
   border-radius: 200px;
   background-color: #50d894;
   text-align: center;
@@ -110,4 +108,32 @@ textarea{
 }
 .back-button:hover {
   cursor: pointer;
+}
+
+@media(max-width:900px){
+		.form-container{
+				padding:2em;
+				margin:1em;
+				margin-top:5rem;
+		}	
+}
+@media(max-width:450px){
+		.form-container{
+				scale:1;
+		}	
+input[type="text"]{ width:100%;
+		font-size:17px;
+}
+textarea{
+		font-size:16px;
+}
+.submit-button{
+		padding:0.7em;
+}
+		.form-container h2{
+				font-size:20px
+		}
+		.submit-button h2{
+				font-size:18px
+		}
 }
